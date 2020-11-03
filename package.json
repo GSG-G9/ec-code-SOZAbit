@@ -1,0 +1,19 @@
+{
+  "name": "ec-code-sozabit",
+  "version": "1.0.0",
+  "description": "ecomerce app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSG-G9/ec-code-SOZAbit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GSG-G9/ec-code-SOZAbit/issues"
+  },
+  "homepage": "https://github.com/GSG-G9/ec-code-SOZAbit#readme"
+}
