@@ -1,3 +1,5 @@
+// createPodactBlock
+// EG OBJICT = {id:"1", name:"Doe", price:46}
 function createHTMLForObj(obj){
     let newObj = document.createElement('div');
     const objProps = Object.keys(obj);
@@ -6,7 +8,7 @@ function createHTMLForObj(obj){
         let objProP = document.createElement('p');
         let objProPC = document.createTextNode(objProps[i]);
         objProP.appendChild(objProPC);
-        let objProV = document.createElementNS('p');
+        let objProV = document.createElement('p');
         let objProVC = document.createTextNode(objPropsValues[i]);
         objProV.appendChild(objProVC);
         newObj.appendChild(objProP);
@@ -14,3 +16,4 @@ function createHTMLForObj(obj){
     }
     return newObj;
 }
+
