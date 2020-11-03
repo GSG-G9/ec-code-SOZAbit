@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/GSG-G9/ec-code-SOZAbit/issues"
   },
-  "homepage": "https://github.com/GSG-G9/ec-code-SOZAbit#readme"
+  "homepage": "https://github.com/GSG-G9/ec-code-SOZAbit#readme",
+  "devDependencies": {
+    "jest": "^26.6.2"
+  }
 }
