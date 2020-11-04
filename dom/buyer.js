@@ -1,6 +1,7 @@
 function createHTMLForObj(obj) {
   if (!obj) return;
   let newObj = document.createElement("div");
+  newObj.setAttribute('class', 'test');
   const objProps = Object.keys(obj);
   objProps.shift();
   objProps.forEach((prop) => {
@@ -13,6 +14,7 @@ function createHTMLForObj(obj) {
     newObj.appendChild(objProP);
     newObj.appendChild(objProV);
     let newBtn = document.createElement("button");
+    newBtn.setAttribute('class', 'addToCartBtn');
     let objID = obj.id;
     newBtn.addEventListener("click" /*function.js*/);
   });
