@@ -1,4 +1,6 @@
 
+
+
 let addProductBtnco = document.getElementById("addBtn");
 addProductBtnco.addEventListener("click",addItem);
 let productArray;
