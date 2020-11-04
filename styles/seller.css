@@ -85,6 +85,7 @@ nav{
     width: 60%;
     height: 50vh;
     border: black solid;
+    visibility: hidden;
     
 }
 
