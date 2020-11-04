@@ -82,12 +82,12 @@ function createProduct(obj){
     
 
     function purchase(){
-        let cartPage = document.getElementByClassName("cartPageProduct");
-        cartPage.innerHTML = "";
+        cartContainer.innerHTML = "";
         let finishMessage = document.createElement('p');
         let messageContent = document.createTextNode("Purchased Successfully");
         finishMessage.appendChild(messageContent);
-        cartPage.appendChild(finishMessage);
+        cartContainer.appendChild(finishMessage);
+        localStorage.removeItem("array");
     }
 
 
