@@ -20,8 +20,23 @@ function addToItemList(obj,targetArray) {
         return [...targetArray, obj]
 }
 
+function deleteFromItemList(targetArray, deletedItem) {
+    if (!Array.isArray(targetArray)) return null;
+    let rArray=[...targetArray];
+    for (var i = 0; i < rArray.length; i++) {
+        var obj = rArray[i];
+    
+        if ( obj.id === deletedItem.id) {
+            rArray.splice(i, 1);
+            
+        }
+    }
+        return rArray;
+}
+
 module.exports = {
     search,
     addToCartList,
-    addToItemList
+    addToItemList,
+    deleteFromItemList
 }

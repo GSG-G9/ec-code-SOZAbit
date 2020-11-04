@@ -65,3 +65,12 @@ describe('Testing addToItemList return value', () => {
         expect(acual).toMatchObject(expected);
     }) 
 });
+
+describe('Testing deleteItems return value', () => {     
+	test(`Should delete{id:"1", name:"Doe", price:46} when given {id:"4", name:"Dodsae", price:46} & searchArr`, ()=>{
+        let acual = fun.deleteFromItemList(searchArr,{id:"1", name:"Doe", price:46});
+        let expected = [{id:"2", name:"edfgDoe", price:4},
+        {id:"3", name:"moon", price:4600},]
+        expect(acual).toMatchObject(expected);
+    }) 
+});
