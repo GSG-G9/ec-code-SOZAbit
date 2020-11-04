@@ -1,5 +1,6 @@
-const pureFuncs = require("../utlis/function");
-var array = [];
+// const pureFuncs = require("../utlis/function");
+var array = [{name: "fdasf", category: "computers", Price: "2222"},{id: "2", name: "", category: "computers", Price: ""}
+];
 
 localStorage.setItem("array", JSON.stringify(array));
 
