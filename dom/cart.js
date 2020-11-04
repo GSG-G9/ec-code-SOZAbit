@@ -80,3 +80,25 @@ function createProduct(obj){
         console.log(objProV);
     }}
     
+
+    function purchase(){
+        let cartPage = document.getElementByClassName("cartPageProduct");
+        cartPage.innerHTML = "";
+        let finishMessage = document.createElement('p');
+        let messageContent = document.createTextNode("Purchased Successfully");
+        finishMessage.appendChild(messageContent);
+        cartPage.appendChild(finishMessage);
+    }
+
+
+    let priceBtn = document.getElementByClass('totalPriceButton');
+    priceBtn.addEventListener('click', () =>{
+        let viewedItem = displayCartItems();
+        let totalPrice = 0;
+        for(let i = 0; i< viewedItem.length; i++){
+            totalPrice += viewedItem[i].price;
+        }
+        let itemsPrice = document.getElementById('totalPriceResult');
+        let actualPrice = document.createTextNode(totalPrice);
+        itemsPrice.appendChild(actualPrice);
+    })
