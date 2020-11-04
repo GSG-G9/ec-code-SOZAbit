@@ -35,3 +35,22 @@ describe('Testing search return value', () => {
     })
 });
 
+describe('Testing addToCartList return value', () => {     
+	test(`Should return [{id:"1", name:"Doe", price:46}] when given "1" & searchArr & []`, ()=>{
+        let acual = fun.addToCartList("1",searchArr,[]);
+        let expected = [{id:"1", name:"Doe", price:46}]
+        expect(acual).toMatchObject(expected);
+    }) 
+
+    test(`Should return [{id:"2", name:"edfgDoe", price:4}] when given "2" & searchArr & []`, ()=>{
+        let acual = fun.addToCartList("2",searchArr,[]);
+        let expected = [{id:"2", name:"edfgDoe", price:4}]
+        expect(acual).toMatchObject(expected);
+    }) 
+
+    test(`Should return [{id:"1", name:"Doe", price:46},{id:"2", name:"edfgDoe", price:4}] when given "2" & searchArr & [{id:"1", name:"Doe", price:46}]`, ()=>{
+        let acual = fun.addToCartList("2",searchArr,[{id:"1", name:"Doe", price:46}]);
+        let expected = [{id:"1", name:"Doe", price:46},{id:"2", name:"edfgDoe", price:4}]
+        expect(acual).toMatchObject(expected);
+    }) 
+});
