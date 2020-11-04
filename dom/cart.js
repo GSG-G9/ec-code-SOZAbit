@@ -80,3 +80,43 @@ function createProduct(obj){
         console.log(objProV);
     }}
     
+
+    function purchase(){
+        cartContainer.innerHTML = "";
+        let finishMessage = document.createElement('p');
+        let messageContent = document.createTextNode("Purchased Successfully");
+        finishMessage.appendChild(messageContent);
+        cartContainer.appendChild(finishMessage);
+        localStorage.removeItem("array");
+    }
+
+
+    function calculateTotalPrice(){
+        let viewedItem = displayCartItems();
+        let totalPrice = 0;
+        for(let i = 0; i< viewedItem.length; i++){
+            totalPrice += viewedItem[i].price;
+        }
+        let itemsPrice = document.getElementById('totalPriceResult');
+        let actualPrice = document.createTextNode(totalPrice);
+        itemsPrice.appendChild(actualPrice);
+    }
+
+
+    function calculateTotalNumber(){
+        let viewedItem = displayCartItems();
+        let numOfItems = viewedItem.length;
+        let actualNum = document.createTextNode(numOfItems);
+        let itemNumberDiv = document.getElementById('totalNumberResult');
+        itemNumberDiv.appendChild(actualNum);
+    }
+
+
+    let priceBtn = document.getElementsByClassName('totalPriceButton')[0];
+    priceBtn.addEventListener('click', calculateTotalPrice);
+
+    let purchaseButton = document.getElementById('totalPurchaseButton');
+    purchaseButton.addEventListener('click', purchase);
+
+    let totalNumberBtn = document.getElementsByClassName('totalNumberButton')[0];
+    totalNumberBtn.addEventListener('click', calculateTotalNumber);
