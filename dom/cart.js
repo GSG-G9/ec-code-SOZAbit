@@ -91,8 +91,7 @@ function createProduct(obj){
     }
 
 
-    let priceBtn = document.getElementByClass('totalPriceButton');
-    priceBtn.addEventListener('click', () =>{
+    function calculateTotalPrice(){
         let viewedItem = displayCartItems();
         let totalPrice = 0;
         for(let i = 0; i< viewedItem.length; i++){
@@ -101,4 +100,11 @@ function createProduct(obj){
         let itemsPrice = document.getElementById('totalPriceResult');
         let actualPrice = document.createTextNode(totalPrice);
         itemsPrice.appendChild(actualPrice);
-    })
+    }
+
+
+    let priceBtn = document.getElementsByClassName('totalPriceButton')[0];
+    priceBtn.addEventListener('click', calculateTotalPrice);
+
+    let purchaseButton = document.getElementById('totalPurchaseButton');
+    purchaseButton.addEventListener('click', purchase)
