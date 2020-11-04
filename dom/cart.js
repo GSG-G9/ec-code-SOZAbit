@@ -103,8 +103,20 @@ function createProduct(obj){
     }
 
 
+    function calculateTotalNumber(){
+        let viewedItem = displayCartItems();
+        let numOfItems = viewedItem.length;
+        let actualNum = document.createTextNode(numOfItems);
+        let itemNumberDiv = document.getElementById('totalNumberResult');
+        itemNumberDiv.appendChild(actualNum);
+    }
+
+
     let priceBtn = document.getElementsByClassName('totalPriceButton')[0];
     priceBtn.addEventListener('click', calculateTotalPrice);
 
     let purchaseButton = document.getElementById('totalPurchaseButton');
-    purchaseButton.addEventListener('click', purchase)
+    purchaseButton.addEventListener('click', purchase);
+
+    let totalNumberBtn = document.getElementsByClassName('totalNumberButton')[0];
+    totalNumberBtn.addEventListener('click', calculateTotalNumber);
