@@ -54,3 +54,14 @@ describe('Testing addToCartList return value', () => {
         expect(acual).toMatchObject(expected);
     }) 
 });
+
+describe('Testing addToItemList return value', () => {     
+	test(`Should return [{id:"4", name:"Dodsae", price:46d}] when given {id:"4", name:"Dodsae", price:46} & searchArr`, ()=>{
+        let acual = fun.addToItemList({id:"4", name:"Dodsae", price:46},searchArr);
+        let expected = [{id:"1", name:"Doe", price:46},
+        {id:"2", name:"edfgDoe", price:4},
+        {id:"3", name:"moon", price:4600},
+        {id:"4", name:"Dodsae", price:46}]
+        expect(acual).toMatchObject(expected);
+    }) 
+});

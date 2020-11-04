@@ -13,8 +13,15 @@ function addToCartList(id,targetArray,wantedArray) {
     return rArray;    
 }
 
+
+function addToItemList(obj,targetArray) {
+    if (!Array.isArray(targetArray)) return null;
+    if (obj.id && obj.name && obj.price)
+        return [...targetArray, obj]
+}
+
 module.exports = {
     search,
     addToCartList,
-    // addToItemList
+    addToItemList
 }
