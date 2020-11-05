@@ -1,5 +1,6 @@
 // const pureFuncs = require("../utlis/function");
 let products = JSON.parse(localStorage.getItem("productArray"));
+console.log(products);
 let cart = [];
 function createHTMLForObj(obj) {
   if (!obj) return;
@@ -26,7 +27,8 @@ function createHTMLForObj(obj) {
   return newObj;
 }
 
-let container = document.getElementsByClassName("productContainer")
+let container = document.getElementsByClassName("productContainer")[0]
+// console.log(CON);
 products.forEach((obj)=>{
   container.appendChild(createHTMLForObj(obj))
 })
